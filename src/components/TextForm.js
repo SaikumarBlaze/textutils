@@ -61,8 +61,16 @@ export default function TextForm(props) {
 
         // Position the copy message near the button that was clicked
         copyMessage.style.position = "absolute";
-        copyMessage.style.top = `${buttonRect.top + window.scrollY - 170}px`;
-        copyMessage.style.left = `${buttonRect.left + window.scrollX - 104}px`;
+        copyMessage.style.top = `${
+          buttonRect.top + window.scrollY - copyMessage.offsetHeight - 8 - 35
+        }px`;
+        copyMessage.style.left = `${
+          buttonRect.left +
+          window.scrollX +
+          buttonRect.width / 2 -
+          copyMessage.offsetWidth / 2 -
+          70
+        }px`;
         copyMessage.style.display = "flex";
         copyMessage.style.justifyContent = "center";
         copyMessage.style.alignItems = "center";
@@ -90,7 +98,6 @@ export default function TextForm(props) {
       <div
         className="container my-2"
         style={{
-          position: "relative",
           color: props.theme !== 5 ? "white" : "black",
         }}
       >

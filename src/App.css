@@ -8,20 +8,21 @@ body::-webkit-scrollbar,
 }
 
 #talkbubble {
-  width: 145px;
-  height: 35px;
+  width: max-content;
+  padding: 5px 10px;
   background-color: #b6bdca;
   color: black;
-  border-radius: 7px;
+  border-radius: 5px;
   font-size: smaller;
   position: relative;
+  z-index: 1000;
 }
 
 #talkbubble:before {
   content: "";
   position: absolute;
   right: 69px;
-  top: 35px;
+  top: 30px;
   width: 0;
   height: 0;
   border-left: 6px solid transparent;
